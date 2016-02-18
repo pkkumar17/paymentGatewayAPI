@@ -9,7 +9,7 @@ from rest_framework.response import Response
 
 
 def index(request):
-    return render(request, "gatewaysApp/index.html")
+    return render(request, "index.html")
 
 @api_view(['GET'])
 def gatewaysList(request):
@@ -46,7 +46,7 @@ def gatewaysSelection(request):
         "amount": "10.00",
         "payment_method_nonce": nonce
         })
-        return render(request, "gatewaysApp/success.html") 
+        return render(request, "success.html") 
     
     else:
         pass
