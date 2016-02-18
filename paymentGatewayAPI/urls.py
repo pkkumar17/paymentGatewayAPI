@@ -14,7 +14,12 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from gatewaysApp.views import index, getToken, gatewaysList, gatewaysSelection
 
 urlpatterns = [
+    url('^index/', index, name = 'index'),
+    url('^gatewaysList/', gatewaysList, name = 'gatewaysList'),
+    url('^transcation/', gatewaysSelection, name = 'gatewaysSelection'),
+    url('^getToken/', getToken, name = 'getToken'),
     url(r'^admin/', include(admin.site.urls)),
 ]
