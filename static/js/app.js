@@ -7,13 +7,13 @@ app.config(function($stateProvider, $urlRouterProvider) {
         .state('/', {
             url: '/',
             controller:'dashboarCtrl',
-            templateUrl: 'view/dashboard.html'
+            templateUrl: 'static/view/dashboard.html'
         })
         
         .state('gateway', {
             url: '/gateway',
             controller: 'brainteeCtrl',
-            templateUrl: 'view/braintree.html'
+            templateUrl: 'static/view/braintree.html'
         });
         
     $urlRouterProvider.otherwise('/');

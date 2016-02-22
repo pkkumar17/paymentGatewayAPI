@@ -1,6 +1,5 @@
 
 app.controller('dashboarCtrl', function($scope, gateway, $state) {
-	
 	var details = gateway.openGateway();
     $scope.firstName= details.firstName;
     $scope.lastName= details.lastName;
@@ -20,7 +19,6 @@ app.controller('dashboarCtrl', function($scope, gateway, $state) {
 
     $scope.openGateway = function () {
     	if ($scope.selected_gateway.name = "dwolla") {
-    		alert("here it go")
     		$state.go('gateway');
     	}
     }
