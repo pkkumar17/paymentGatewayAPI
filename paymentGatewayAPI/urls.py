@@ -12,7 +12,7 @@ urlpatterns = [
     url('^gatewaysList/$', gatewaysList, name = 'gatewaysList'),
     url('^checkout/$', gatewaysSelection, name = 'gatewaysSelection'),
     url('^getToken/', getToken, name = 'getToken'),
-    url('^registration/$', customerRegistration, name = 'customerRegistration'),
+    url('^registration$', customerRegistration, name = 'customerRegistration'),
     url(r'^admin/', include(admin.site.urls)),
 ]
 

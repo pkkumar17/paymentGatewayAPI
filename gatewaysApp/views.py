@@ -24,7 +24,8 @@ def gatewaysList(request):
 
 def customerRegistration(request):
 
-    if request.Method == "POST":
+    print request.method
+    if request.method == "POST":
         first_name = request.POST.get("first_name")
         last_name = request.POST.get("last_name")
         company = request.POST.get("company", '')
@@ -56,7 +57,12 @@ def customerRegistration(request):
                                               fax=fax,
                                               website=website
                                               )
-        return render(request, "success.html")
+            customerDetails.save()
+            customerDataWithID = dict(customerData)
+            customerDataWithID["customer_id"] = customer_id
+            return HttpResponse(json.dumps(customerDataWithID))
+        else:
+            pass
     
 def getToken(request):     
     
