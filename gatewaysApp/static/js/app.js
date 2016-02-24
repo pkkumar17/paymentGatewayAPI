@@ -14,6 +14,12 @@ app.config(function($stateProvider, $urlRouterProvider) {
             url: '/gateway',
             controller: 'brainteeCtrl',
             templateUrl: 'static/view/braintree.html'
+        })
+
+        .state('customer', {
+            url: '/customer',
+            controller: 'customerCtrl',
+            templateUrl: 'static/view/customer.html'
         });
         
     $urlRouterProvider.otherwise('/');
